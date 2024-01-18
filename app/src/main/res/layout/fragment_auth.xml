@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context=".AuthFragment">
+
+    <ImageView
+        android:id="@+id/vk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:src="@drawable/vk_text_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to VK"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vk" />
+
+    <EditText
+        android:id="@+id/edLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Login"
+        android:maxLines="1"
+        android:paddingVertical="15dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
+
+    <EditText
+        android:id="@+id/edPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingVertical="15dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/edLogin" />
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Неверный логин или пароль!"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edPassword" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35sp"
+        android:backgroundTint="#0077FF"
+        android:text="Log In"
+        app:layout_constraintTop_toBottomOf="@id/edPassword" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:backgroundTint="#0077FF"
+        android:text="Sign Up"
+        app:layout_constraintTop_toBottomOf="@id/btLogIn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
